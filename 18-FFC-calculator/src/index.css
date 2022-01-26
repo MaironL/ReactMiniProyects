@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/*
+* =============== 
+* Global Styles
+* ===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/*
+* ==================== 
+* Custom Project Style
+* ====================
+*/
+
+#root {
+  display: grid;
+  grid: auto / auto;
+  min-height: 100%;
+  background: rgb(24, 24, 24);
+  background: linear-gradient(
+    90deg,
+    rgba(24, 24, 24, 1) 25%,
+    rgba(72, 105, 107, 1) 50%,
+    rgba(24, 24, 24, 1) 75%
+  );
+}
