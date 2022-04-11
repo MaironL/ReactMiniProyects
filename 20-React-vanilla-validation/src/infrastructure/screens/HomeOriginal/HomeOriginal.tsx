@@ -91,10 +91,11 @@ const Home = () => {
         {inputs.map((input) => {
           return (
             <FormInput
-              key={input.id}
               {...input}
+              id={input.id.toString()}
+              key={input.id}
               value={values[input.name as keyof typeof values]}
-              handleChange={handleChange}
+              onChange={handleChange}
             />
           );
         })}

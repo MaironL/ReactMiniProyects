@@ -3,42 +3,27 @@ import S from './formRadio.module.css';
 
 interface IFormRadio {
   legend: string;
-  radios: {
-    errorMessage: string;
-    items: {
-      id: string;
-      name: string;
-      value: string;
-      label: string;
-    }[];
-  };
-  stateValue: {
-    username: string;
-    email: string;
-    birthday: string;
-    password: string;
-    confirmPassword: string;
-    reciveInformation: string;
-    employment: string;
-  };
+  radios: { name: string; id: string; radioValue: string; label: string }[];
+  errorMessage: string;
+  value: string;
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const FormRadio = ({ legend, radios, handleChange, stateValue }: IFormRadio) => {
+const FormRadio = ({ legend, radios, handleChange, value, errorMessage }: IFormRadio) => {
   return (
     <>
       <fieldset className={`${S.formInput}`}>
         <legend>{legend}</legend>
-        {radios.items.map((radio) => {
-          const { id, name, value, label } = radio;
+        {radios.map((radio) => {
+          const { id, name, radioValue, label } = radio;
           return (
             <div key={id}>
               <input
                 type='radio'
                 id={id.toString()}
                 name={name}
-                value={value}
-                checked={stateValue.employment === radio.value}
+                value={radioValue}
+                checked={value === radioValue}
                 onChange={handleChange}
               />
               <label htmlFor={id.toString()}>{label}</label>
@@ -47,7 +32,7 @@ const FormRadio = ({ legend, radios, handleChange, stateValue }: IFormRadio) => 
           );
         })}
       </fieldset>
-      <span>{radios.errorMessage}</span>
+      <span>{errorMessage}</span>
     </>
   );
 };
