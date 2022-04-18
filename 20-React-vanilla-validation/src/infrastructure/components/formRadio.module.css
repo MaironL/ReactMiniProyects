@@ -8,6 +8,11 @@
   border: 1px solid gray;
 }
 
+.inputCont {
+  display: flex;
+  align-items: center;
+}
+
 legend {
   font-size: 12px;
   color: gray;

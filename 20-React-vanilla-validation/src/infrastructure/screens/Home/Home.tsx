@@ -8,7 +8,7 @@ const Home = () => {
 
   return (
     <div className={`${S.app}`}>
-      <form onSubmit={handleSubmit} autoComplete='off'>
+      <form onSubmit={handleSubmit}>
         <h1>Js Val</h1>
         <FormInput
           id='1'

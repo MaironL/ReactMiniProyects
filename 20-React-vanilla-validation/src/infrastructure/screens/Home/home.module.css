@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  padding: 50px 0;
   background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3)),
     url('https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
   background-size: cover;
@@ -15,9 +15,10 @@ form {
   border-radius: 10px;
 }
 
-h1 {
+.app h1 {
   color: rgb(77, 1, 77);
   text-align: center;
+  font-size: 40px;
 }
 
 button {
@@ -35,6 +36,8 @@ button {
   margin-bottom: 30px;
 }
 
+
 button:disabled {
   background-color: rgb(184, 153, 214);
+  cursor: not-allowed;
 }

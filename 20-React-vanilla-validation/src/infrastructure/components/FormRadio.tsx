@@ -17,7 +17,7 @@ const FormRadio = ({ legend, radios, handleChange, value, errorMessage }: IFormR
         {radios.map((radio) => {
           const { id, name, radioValue, label } = radio;
           return (
-            <div key={id}>
+            <div className={`${S.inputCont}`} key={id}>
               <input
                 type='radio'
                 id={id.toString()}
@@ -26,8 +26,8 @@ const FormRadio = ({ legend, radios, handleChange, value, errorMessage }: IFormR
                 checked={value === radioValue}
                 onChange={handleChange}
               />
+
               <label htmlFor={id.toString()}>{label}</label>
-              <br />
             </div>
           );
         })}

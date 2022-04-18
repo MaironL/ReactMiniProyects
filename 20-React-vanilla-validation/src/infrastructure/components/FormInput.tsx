@@ -26,15 +26,14 @@ const FormInput = (props: IFormInput) => {
 
   return (
     <div className={`${S.formInput}`}>
-      <label>
-        {label}
-        <input
-          {...inputProps}
-          onBlur={handleFocusedBlur}
-          onFocus={handleFocusedFocus}
-          data-focused={errorMessage && focused}
-        />
-      </label>
+      <label>{label}</label>
+      <input
+        {...inputProps}
+        onBlur={handleFocusedBlur}
+        onFocus={handleFocusedFocus}
+        data-focused={errorMessage && focused}
+      />
+
       <span>{errorMessage}</span>
     </div>
   );
