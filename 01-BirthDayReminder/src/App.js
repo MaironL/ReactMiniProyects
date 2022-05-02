@@ -1,11 +1,9 @@
-import React, { useState } from "react";
-import data from "./data";
-import List from "./List";
+import React, { useState } from 'react';
+import data from './data';
+import List from './List';
 
 const App = () => {
-  const [birthdays, setBirtdays] = useState(
-    data.slice(Math.max(data.length - 5, 0))
-  );
+  const [birthdays, setBirtdays] = useState(data.slice(Math.max(data.length - 5, 0)));
 
   const clickClear = () => {
     setBirtdays([]);
@@ -19,11 +17,11 @@ const App = () => {
 
   return (
     <main>
-      <article className="container">
+      <article className='container'>
         <h3>{birthdays.length === 0 ? 0 : data.length} birthdays today</h3>
         <List birthdays={birthdays} />
         <button onClick={clickView}>
-          {birthdays.length > 5 ? "View Less" : "View More"}
+          {birthdays.length > 5 ? 'View Less' : 'View More'}
         </button>
         <button onClick={clickClear}>clear all</button>
       </article>

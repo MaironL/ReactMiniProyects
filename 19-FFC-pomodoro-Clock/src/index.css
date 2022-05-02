@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/*
+* =============== 
+* Global Styles
+* ===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#root {
+  display: grid;
+  grid: auto / auto;
+  min-height: 100%;
+  justify-items: center;
+  align-items: center;
+  background-color: rgb(29, 29, 29);
+  background-image: url('/src/infrastructure/images/tomatoBg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: difference;
+}
